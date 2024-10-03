@@ -1,55 +1,48 @@
 
-# **Libez: Beziers for Lips Conforming**
+# Libez: Beziers for Lips Conforming
 
-**Libez** is a Python-based application designed for interactive lip shape modeling using Bézier curves. This application leverages OpenCV and `tkinter` to allow users to control lip curvature through adjustable parameters.
+## Features
 
-## **Features**
+- Draws parametric Bézier curves to model realistic human lip shapes
+- Interactive user interface with adjustable trackbars for real-time control
+- Visualizes upper and lower lip shapes dynamically, with the ability to customize various parameters like lip width, curvature, and fullness
+- Uses heptatic Bézier curves for detailed lip modeling, allowing fine control over the lip shape
 
-- Draws Bézier curves for lip shapes.
-- Interactive user interface with adjustable trackbars to control parameters like width, amplitude, and control points.
-- Visualizes upper and lower lip shapes using quadratic, quintic, and heptatic Bézier curves.
-
-## **Requirements**
+## Requirements
 
 Before running the project, ensure the following dependencies are installed:
 
-\`\`\`bash
-pip install numpy opencv-python Pillow
-\`\`\`
+```bash
+pip install numpy opencv-python
+```
 
-## **Usage**
+## Usage
 
 1. Clone or download the project to your local machine.
 2. Navigate to the `libez` directory.
-3. Run the Python script:
+3. Run the Python script: `python libez.py`
+4. A window titled `Lip Model and Controls` will open with trackbars to adjust various parameters:
+   - **lipWidth**: Adjusts the total width of the lips.
+   - **lipAmplitude**: Controls the overall vertical scaling of the lips.
+   - **px0, py0**: Defines the central position of the lips.
+   - **upperCornerSpread, lowerCornerSpread**: Adjusts the horizontal spread of the lip corners.
+   - **upperBowCurve, lowerLipFullness**: Modifies the curvature and fullness of the upper and lower lips.
+   - **upperLipLift**: Raises the outer edges of the upper lip.
+   - **upperLipCurve**: Controls the curvature of the upper lip vermilion border.
+   - **lowerLipDrop, lowerLipProtrusion**: Adjusts the downward curve and protrusion of the lower lip.
+5. Watch the lip curves update in real-time as you adjust the parameters using the trackbars.
 
-    \`\`\`bash
-    python libez.py
-    \`\`\`
+## Functionality Overview
 
-4. A window titled `Drawing` will open, with trackbars to adjust various parameters:
-   - **width**: Controls the width of the lips.
-   - **amplitude**: Adjusts the curve’s height.
-   - **px0, py0**: Adjusts the position of control points.
-   - **fc, fp**: Fine-tune control over the curve shape.
-   - **vu, vc, vp, vl**: Parameters for varying curvature and positioning of the lips.
+- **Parametric Lip Modeling**:
+  The app offers a parametric model for drawing human lips using Bézier curves. Multiple control points are defined, allowing for detailed lip shapes and expressions.
 
-5. Watch as the curves update in real time as you adjust the parameters.
+- **Interactive Real-Time Adjustments**:
+  The interface includes multiple trackbars that enable real-time manipulation of lip width, curvature, and fullness. The visual feedback is immediate, allowing you to explore different lip shapes easily.
 
-## **Functionality Overview**
+- **Heptatic Bézier Curves**:
+  The tool employs heptatic Bézier curves (seven control points) for the detailed and realistic modeling of upper and lower lips, mimicking the natural curvature and smoothness of lips.
 
-- **Bézier Curve Calculations**:
-  - The app provides multiple Bézier curve models, including quadratic, quintic, and heptatic Bézier curves, to model both upper and lower lips.
-  
-- **Trackbars**:
-  - Trackbars allow for real-time adjustment of the parameters influencing lip curvature.
+## License
 
-## **Future Work**
-
-The current version focuses on basic lip modeling using Bézier curves. Future versions will add:
-- Additional control points for more complex curves.
-- Enhanced interaction with the model through a graphical interface.
-
-## **License**
-
-This project is licensed under the MIT License.
+Libez is open-source software licensed under the MIT License.
